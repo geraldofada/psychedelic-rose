@@ -1,6 +1,6 @@
 @echo off
 
-REM referencia dos switchs do cl
+REM cl switchs references
 REM  -nologo, remove the msvc logo
 REM      -Zi, creates a .pdb file used by the debbuger (if any error occurs look the -Z7)
 REM      -W4, high error level close to Wall
