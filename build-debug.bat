@@ -12,7 +12,8 @@ REM -opt:ref, eliminates functions and data that are never referenced
 
 
 if not exist "build/debug/x64" mkdir "build/debug/x64"
+if not exist "build/debug/x64/SDL2.dll" copy "vendor\sdl2\lib\SDL2.dll" "build/debug/x64"
 
 pushd "build/debug/x64"
-cl -nologo -Zi -W4 -WX -MT -FC ../../../main.cc /link -opt:ref "../../../vendor/sdl2/lib/SDL2.lib"
+cl -nologo -Zi -W4 -WX -MT -FC -wd4100 ../../../main.cc /link -opt:ref "../../../vendor/sdl2/lib/SDL2main.lib" "../../../vendor/sdl2/lib/SDL2.lib" 
 popd
