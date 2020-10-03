@@ -1,15 +1,12 @@
 #define SDL_MAIN_HANDLED
-#include "vendor/sdl2/include/SDL.h"
-#include <stdio.h>
+#include "SDL.h"
 
-
-
-int main(int argc, char* argv[]) {
+int main(int argc, char **argv) {
 
     SDL_SetMainReady();
-        if (SDL_Init(SDL_INIT_VIDEO) != 0) {
-            return 1; 
-        };
+    if (SDL_Init(SDL_INIT_VIDEO) != 0) {
+        return 1;
+    };
         
     SDL_Point window_size = {640, 480};
     
