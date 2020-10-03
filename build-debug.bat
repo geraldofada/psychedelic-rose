@@ -2,7 +2,7 @@
 
 REM IMPORTANT! This should be executed using the "x64 dev tools cmd" from MSVC
 
-REM cl switchs references
+REM cl switches references
 REM   -nologo, remove the msvc logo
 REM       -Zi, creates a .pdb file used by the debbuger (if any error occurs look the -Z7)
 REM       -W4, high error level close to Wall
